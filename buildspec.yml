@@ -1,0 +1,19 @@
+version: 0.2
+
+env:
+
+proxy:
+  upload-artifacts: yes
+  logs: yes
+        
+phases:
+  install:
+    commands:
+      - touch build.log
+  build:
+    commands:
+      - sed -i 's/\$version/$CODEBUILD_BUILD_ID/' index.html
+
+artifacts:
+  files:
+    - index.html
