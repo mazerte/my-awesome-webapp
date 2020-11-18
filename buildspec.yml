@@ -4,9 +4,11 @@ phases:
   install:
     commands:
       - touch build.log
+      - ls -flash
   build:
     commands:
       - sed -i 's/\$version/$CODEBUILD_BUILD_ID/' index.html
+      - cat index.html
 
 artifacts:
   files:
