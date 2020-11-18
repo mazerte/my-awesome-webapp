@@ -1,10 +1,4 @@
 version: 0.2
-
-env:
-
-proxy:
-  upload-artifacts: yes
-  logs: yes
         
 phases:
   install:
